@@ -26,7 +26,9 @@ jobs:
               with:
                   host: ${{ secrets.PROD_SERVER_HOST }}
                   username: ${{ secrets.PROD_SERVER_USER }}
-                  # key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  port: ${{ secrets.PROD_SERVER_PORT}}
+                  fingerprint: ${{ secrets.FINGERPRINT }}
                   # passphrase: ${{ secrets.SSH_PASSPHRASE }}
                   script: |
                       echo "Logging in to Yandex Container Registry"
