@@ -62,7 +62,7 @@ jobs:
             - name: Get commits
               run: |
                   git fetch --tags
-                  echo "git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD"
+                  echo git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD
                   echo "COMMITS=$(git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
             - name: Set Date
               run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
@@ -90,9 +90,10 @@ jobs:
                   LABELS: release-${{ github.run_number }}
             - name: Update Changelog
               run: |
+                  git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD
                   echo "## Release ${{ github.run_number }} - $(date)" > temp_CHANGELOG.md
                   echo >> temp_CHANGELOG.md
-                  git log --oneline --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD >> temp_CHANGELOG.md
+                  git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD >> temp_CHANGELOG.md
                   echo >> temp_CHANGELOG.md
                   echo "Current CHANGELOG.md content:"
                   cat CHANGELOG.md
