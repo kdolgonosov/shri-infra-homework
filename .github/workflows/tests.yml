@@ -1,5 +1,5 @@
-name: Tests
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: Тесты
+run-name: Тестирование
 on:
     pull_request:
         branches: [main]

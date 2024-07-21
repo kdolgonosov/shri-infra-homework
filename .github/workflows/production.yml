@@ -1,4 +1,5 @@
-name: Deploy
+name: Задеплоить релиз
+run-name: Деплоится ${{ github.event.inputs.release_version }} релиз
 
 on:
     workflow_dispatch:
@@ -28,11 +29,6 @@ jobs:
                   username: ${{ secrets.PROD_SERVER_USER }}
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   port: ${{ secrets.PROD_SERVER_PORT}}
-
-                  # host: ${{ secrets.PROD_SERVER_HOST }}
-                  # username: ${{ secrets.PROD_SERVER_USER }}
-                  # key: ${{ secrets.SSH_PRIVATE_KEY }}
-                  # passphrase: ${{ secrets.SSH_PASSPHRASE }}
                   script: |
                       echo "Logging in to Yandex Container Registry"
                       echo "${{ secrets.YANDEX_TOKEN }}" | docker login --username oauth --password-stdin cr.yandex

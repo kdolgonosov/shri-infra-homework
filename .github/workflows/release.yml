@@ -1,5 +1,5 @@
-name: Create release
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: Создать релиз
+run-name: Формируется релиз
 on: [workflow_dispatch]
 
 jobs:
@@ -121,9 +121,9 @@ jobs:
                     --head releases/${{ github.run_number }}
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            # - name: Merge Pull Request
-            #   run: |
-            #       pr_number=$(gh pr list --base main --head releases/${{ github.run_number }} --json number --jq '.[0].number')
-            #       gh pr merge $pr_number --admin --squash --delete-branch
-            #   env:
-            #       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Merge Pull Request
+              run: |
+                  pr_number=$(gh pr list --base main --head releases/${{ github.run_number }} --json number --jq '.[0].number')
+                  gh pr merge $pr_number --admin --squash --delete-branch
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
