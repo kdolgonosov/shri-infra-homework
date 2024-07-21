@@ -1,3 +1,6 @@
+## Release 18 - Sun Jul 21 11:33:54 UTC 2024
+
+- Merge branch 'main' of github.com:kdolgonosov/shri-infra-homework
 ## Release 17 - Sun Jul 21 11:16:55 UTC 2024
 
 
