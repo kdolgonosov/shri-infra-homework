@@ -63,7 +63,7 @@ jobs:
               run: |
                   git fetch
                   git branch --set-upstream-to origin/releases/${{ github.run_number }}
-                  echo "COMMITS=$(git log $PREVIOUS_TAG..HEAD --pretty=format:'%h %s')" >> $GITHUB_ENV
+                  echo "COMMITS=$(git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
             - name: Set Date
               run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
             - name: Create Release Label
