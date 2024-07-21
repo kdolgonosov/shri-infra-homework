@@ -64,7 +64,7 @@ jobs:
               run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
             - name: Get previous tag
-              run: echo "PREVIOUS_TAG=v$(expr ${{ github.run_number }} - 1)" >> $GITHUB_ENV
+              run: echo "PREVIOUS_TAG=$(expr ${{ github.run_number }} - 1)" >> $GITHUB_ENV
             - name: Get commits
               run: |
                   git fetch
