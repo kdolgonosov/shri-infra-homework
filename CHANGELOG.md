@@ -1,3 +1,6 @@
+## Release 24 - Sun Jul 21 12:48:42 UTC 2024
+
+0c2149d fix-2
 d98a774 fix
 
 ## Release 21 - Sun Jul 21 11:52:56 UTC 2024
