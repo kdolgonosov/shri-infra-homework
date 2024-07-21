@@ -62,7 +62,7 @@ jobs:
             - name: Get commits
               run: |
                   git fetch --tags
-                  echo "COMMITS=$(git log --oneline --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
+                  echo "COMMITS=$(git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
             - name: Set Date
               run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
             - name: Create Release Label
