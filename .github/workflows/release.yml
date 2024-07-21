@@ -58,7 +58,7 @@ jobs:
                   git tag -a v${{ github.run_number }} -m "Release ${{ github.run_number }}"
                   git push origin --tags
             - name: Get previous tag
-              run: echo "PREVIOUS_TAG=$(expr ${{ github.run_number }} - 1)" >> $GITHUB_ENV
+              run: echo "PREVIOUS_TAG=v$(expr ${{ github.run_number }} - 1)" >> $GITHUB_ENV
             - name: Get commits
               run: |
                   git fetch
