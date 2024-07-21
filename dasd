@@ -1,0 +1,55 @@
+[33m8672127[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m fix-2
+[33m5bce0c8[m fix-1
+[33maa05beb[m Update CHANGELOG for release 20 (#32)
+[33mecf59d3[m[33m ([m[1;33mtag: v20[m[33m)[m fix-3
+[33m41dcf4c[m fix-2
+[33m25880be[m Merge branch 'main' of github.com:kdolgonosov/shri-infra-homework
+[33m4d671d3[m fix-1
+[33m2578d60[m Update CHANGELOG for release 19 (#30)
+[33m900a97a[m[33m ([m[1;33mtag: v19[m[33m)[m fix-2
+[33m9720c61[m fix-2
+[33m616895d[m fix-1
+[33m74f3dec[m Update CHANGELOG for release 18 (#28)
+[33m70c5f06[m[33m ([m[1;33mtag: v18[m[33m)[m Merge branch 'main' of github.com:kdolgonosov/shri-infra-homework
+[33m0c9f5b8[m fix
+[33mdc1bb6e[m Update CHANGELOG for release 17 (#26)
+[33m219068a[m[33m ([m[1;33mtag: v17[m[33m)[m Merge branch 'main' of github.com:kdolgonosov/shri-infra-homework
+[33m7e33a6f[m fix
+[33mf14fec2[m Update CHANGELOG for release 16 (#24)
+[33m4928990[m[33m ([m[1;33mtag: v16[m[33m)[m fix-2
+[33meede952[m Merge branch 'main' of github.com:kdolgonosov/shri-infra-homework
+[33m61ecb2b[m fix-1
+[33m81edbf8[m Update CHANGELOG for release 15 (#22)
+[33mfc40de8[m[33m ([m[1;33mtag: v15[m[33m)[m fix-2
+[33mfa49c25[m fix-1
+[33mfa9f669[m Update CHANGELOG for release 14 (#20)
+[33md5c4fb7[m[33m ([m[1;33mtag: v14[m[33m)[m fix-2
+[33m01e57c9[m Merge branch 'main' of github.com:kdolgonosov/shri-infra-homework
+[33m10ec43a[m fix-1
+[33m9df7e55[m Update CHANGELOG for release 13 (#18)
+[33m79e88ce[m[33m ([m[1;33mtag: v13[m[33m)[m fix
+[33m4d5bee0[m[33m ([m[1;33mtag: v9[m[33m, [m[1;33mtag: v12[m[33m, [m[1;33mtag: v11[m[33m)[m fix-3
+[33m207676d[m fix-2
+[33m20cdf8c[m fix
+[33mb63934e[m Merge branch 'main' of github.com:kdolgonosov/shri-infra-homework
+[33m01f7c20[m test
+[33m7c73737[m Merge pull request #9 from kdolgonosov/test-2
+[33mb93458c[m[33m ([m[1;31morigin/test-2[m[33m, [m[1;32mtest-2[m[33m)[m fix
+[33m869e650[m test
+[33mc7aab8b[m fix author
+[33md899d6c[m fix author
+[33m3bd5fa6[m init
+[33m9ead00a[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m)[m init
+[33mb68ba19[m fix
+[33m459c461[m[33m ([m[1;33mtag: v7[m[33m)[m fix
+[33m9ffcc18[m fix
+[33m492cb9c[m fix
+[33m67e884b[m[33m ([m[1;33mtag: v6[m[33m)[m Merge branch 'main' of github.com:kdolgonosov/shri-infra-homework
+[33m948735b[m fix
+[33mb76d00b[m Update CHANGELOG for release 5 (#3)
+[33m138e5e3[m[33m ([m[1;33mtag: v5[m[33m)[m fix
+[33m3bd7afd[m[33m ([m[1;33mtag: v4[m[33m)[m fix
+[33m2b65cbe[m[33m ([m[1;33mtag: v3[m[33m, [m[1;33mtag: v2[m[33m)[m fix
+[33m1f99109[m add release workflow
+[33md9961a0[m add dockerfile
+[33m466eb3c[m Add infra homework
