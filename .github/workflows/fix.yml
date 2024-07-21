@@ -62,6 +62,14 @@ jobs:
                   git push origin --tags
             - name: Set Date
               run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+            - name: Get previous tag
+              run: echo "PREVIOUS_TAG=v$(expr ${{ github.run_number }} - 1)" >> $GITHUB_ENV
+            - name: Get commits
+              run: |
+                  git fetch
+                  git branch --set-upstream-to origin/releases/${{ github.run_number }}
+                  echo "COMMITS=$(git log $PREVIOUS_TAG..HEAD --pretty=format:'%h %s')" >> $GITHUB_ENV
             - name: Add Fix Comment to Issue
               run: |
                   issue_number=$(gh issue list --label release-${{ github.event.inputs.release_version }} --json number --jq '.[0].number')
@@ -73,4 +81,5 @@ jobs:
                       **Дата:** ${{ env.CURRENT_DATE }}
                       **Автор фикса:** ${{ github.actor }}
                       **Номер версии:** ${{ github.event.inputs.release_version }}_fix${{ github.run_number }}
+                      **Коммиты:** ${{ env.COMMITS }}
                       **Docker образ:** [Ссылка](http://cr.yandex/crpr13vub4nq44mp9r6u/app:${{ github.event.inputs.release_version }}_fix${{ github.run_number }})
