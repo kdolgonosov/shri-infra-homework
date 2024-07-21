@@ -93,7 +93,7 @@ jobs:
                   git fetch --tags
                   echo "## Release ${{ github.run_number }} - $(date)" > temp_CHANGELOG.md
                   echo >> temp_CHANGELOG.md
-                  git log --oneline --pretty=format:"- %s" $PREVIOUS_TAG..HEAD >> temp_CHANGELOG.md
+                  git rev-list --oneline --pretty=format:"-%h %s" $PREVIOUS_TAG..HEAD >> temp_CHANGELOG.md
                   echo >> temp_CHANGELOG.md
                   echo "Current CHANGELOG.md content:"
                   cat CHANGELOG.md
