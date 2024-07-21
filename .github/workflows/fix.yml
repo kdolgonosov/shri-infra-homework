@@ -1,4 +1,4 @@
-name: Fix
+name: Фикс
 
 on:
     workflow_dispatch:
