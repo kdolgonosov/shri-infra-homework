@@ -59,13 +59,12 @@ jobs:
                   git push origin --tags
             - name: Get previous tag
               run: echo "PREVIOUS_TAG=v$(expr ${{ github.run_number }} - 1)" >> $GITHUB_ENV
+            - name: Set Date
+              run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
             - name: Get commits
               run: |
                   git fetch --tags
-                  echo git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD
-                  echo "COMMITS=$(git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
-            - name: Set Date
-              run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+                  echo "COMMITS=$(git log --oneline --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
             - name: Create Release Label
               run: |
                   gh label create "release-${{ github.run_number }}" --color "#0E8A16" || echo "Label already exists"
