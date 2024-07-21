@@ -61,9 +61,8 @@ jobs:
               run: echo "PREVIOUS_TAG=v$(expr ${{ github.run_number }} - 1)" >> $GITHUB_ENV
             - name: Get commits
               run: |
-                  git fetch
-                  git branch --set-upstream-to origin/releases/${{ github.run_number }}
-                  echo "COMMITS=$(git rev-list --oneline --pretty=format:"-%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
+                  git fetch --tags
+                  echo "COMMITS=$(git log --oneline --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
             - name: Set Date
               run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
             - name: Create Release Label
