@@ -69,7 +69,7 @@ jobs:
               run: |
                   git fetch
                   git branch --set-upstream-to origin/releases/${{ github.run_number }}
-                  echo "COMMITS=$(git log $PREVIOUS_TAG..HEAD --pretty=format:'%h %s')" >> $GITHUB_ENV
+                  echo "COMMITS=$(git log --pretty=format:"%h %s" $PREVIOUS_TAG..HEAD)" >> $GITHUB_ENV
             - name: Add Fix Comment to Issue
               run: |
                   issue_number=$(gh issue list --label release-${{ github.event.inputs.release_version }} --json number --jq '.[0].number')
