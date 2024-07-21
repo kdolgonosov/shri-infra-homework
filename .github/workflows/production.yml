@@ -28,11 +28,14 @@ jobs:
                   username: ${{ secrets.PROD_SERVER_USER }}
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   port: ${{ secrets.PROD_SERVER_PORT}}
-                  fingerprint: ${{ secrets.FINGERPRINT }}
+
+                  # host: ${{ secrets.PROD_SERVER_HOST }}
+                  # username: ${{ secrets.PROD_SERVER_USER }}
+                  # key: ${{ secrets.SSH_PRIVATE_KEY }}
                   # passphrase: ${{ secrets.SSH_PASSPHRASE }}
                   script: |
                       echo "Logging in to Yandex Container Registry"
-                      echo "${{ secrets.YANDEX_TOKEN }}" | docker login --username oauth --password-stdin cr.yandex
+                      echo "${{ secrets.YANDEX_TOKEN }}" | docker login --username json_key --password-stdin cr.yandex
                       echo "Pulling the latest Docker image"
                       docker pull cr.yandex/crpr13vub4nq44mp9r6u/app:${{ github.event.inputs.release_version }}_latest
                       echo "Stopping and removing old container"
