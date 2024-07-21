@@ -91,7 +91,7 @@ jobs:
               run: |
                   echo "## Release ${{ github.run_number }} - $(date)" > temp_CHANGELOG.md
                   echo >> temp_CHANGELOG.md
-                  ${{ env.COMMITS }} >> temp_CHANGELOG.md
+                  echo '${{ env.COMMITS }}' > temp_CHANGELOG.md
                   echo >> temp_CHANGELOG.md
                   echo "Current CHANGELOG.md content:"
                   cat CHANGELOG.md
